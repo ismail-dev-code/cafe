@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop</title>
+    <title>Cafe Shop</title>
     <!-- css link -->
     <link rel="stylesheet" href="style.css">
 
     <!-- favIcon -->
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon" />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- daisyui CDN -->
     <link
@@ -31,44 +35,7 @@
 tailwind.config = {
         theme: {
           extend: {
-            backgroundImage: {
-              bannerCafe:
-                "linear-gradient(360.00deg, rgba(12, 160, 88, 0.11),rgba(22, 207, 56, 0.1) 100%), url('./assets/banner.png')",
-            },
-            keyframes: {
-              dimlight: {
-                "0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%": {
-                  color: "#a7f910e4",
-                  boxShadow: "none",
-                },
-                "18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%": {
-                  color: "#8c8e8f",
-                  textShadow: "0 0 10px #03bcf4",
-                },
-              },
-              typing: {
-                "0%": {
-                  width: "0%",
-                  visibility: "hidden",
-                },
-                "100%": {
-                  width: "100%",
-                },
-              },
-              blink: {
-                "50%": {
-                  borderColor: "transparent",
-                },
-                "100%": {
-                  borderColor: "white",
-                },
-              },
-            },
-            animation: {
-              typing:
-                "typing 4s steps(20) infinite alternate, blink .7s infinite",
-              dimlight: "dimlight 10s infinite",
-            },
+            
             colors: {
               accent: "#ebb392",
               secondary: "rgb(255, 249, 244)",
@@ -82,8 +49,9 @@ tailwind.config = {
 </script>
 
 </head>
-<body class="font-sans bg-cyan-950">
-    <!-- header Section  -->
+<body class="montserrat-sarif">
+    <header>
+      <!-- header Section  -->
     <section class="bg-black text-white">
       <div class="w-11/12 mx-auto flex justify-between items-center">
         <!-- Logo -->
@@ -116,9 +84,11 @@ tailwind.config = {
         </div>
       </div>
     </section>
+    </header>
 
-    <!-- Banner Section -->
-    <section>
+   <main>
+     <!-- Banner Section -->
+     <section>
       <div
         class="hero min-h-[90vh] bg-cover bg-center bg-no-repeat"
         style="background-image: url(./assets/banner.png)"
@@ -127,7 +97,7 @@ tailwind.config = {
         <div class="w-11/12 mx-auto flex text-left justify-start">
           <div class="text-white">
             <h1 class="mb-5 text-6xl font-bold">
-              FRESH <span class="text-[#ebb392]">COFFEE</span> IN <br />THE MORNING
+              FRESH <span class="text-[#ebb392] animate-dimlight">COFFEE</span> IN <br />THE MORNING
             </h1>
             <p class="mb-5 text-xl text-[#f5efef99] max-w-md">
               Start your day with the perfect cup of coffee! Indulge in the rich
@@ -142,8 +112,8 @@ tailwind.config = {
     </section>
 
     <!-- About Section -->
-    <section class="bg-black">
-    <p class="text-white text-center text-6xl font-semibold">ABOUT US</p> <!-- text-black to text-white -->
+    <section class="bg-black pt-6 mb-20">
+    <p class="text-white text-center font-bold text-3xl">ABOUT US</p>  
     <div class="w-11/12 pt-10 mx-auto hero bg-base-200 bg-black">
         <div class="hero-overlay"></div>
         <div class="hero-content flex-col lg:flex-row">
@@ -158,13 +128,82 @@ tailwind.config = {
                 <p class="py-6 max-w-md text-xl text-[#f5efef99]">
                     Our coffee stands out with its rich aroma, premium beans, and perfectly balanced flavors, delivering an unforgettable taste in every sip!
                 </p>
-                <button class="btn animate-bounce btn-warning font-bold text-white">Learn More</button>
+                <button class="btn translate-z-12 rotate-x-0 btn-warning font-bold text-white">Learn More</button>
             </div>
         </div>
     </div>
     </section>
+<!-- grid cards section  -->
+<section class="w-11/12 mx-auto mb-20">
+  <!-- cards -->
+  <div class="grid grid-cols-3 gap-3">
+    <!-- card 1 -->
+     <div class="bg-[#ebb392] text-left flex items-center rounded-lg">
+      <div><img class="max-w-40 mx-auto p-1 rounded-lg" src="./assets/606cea5ac822e531e6cb2fad474bbd1f.jpg" alt=""></div>
+      <div class="px-1">
+        <h1 class="text-xl font-bold ">Coffee Noakhalian</h1>
+        <p class="text-base pb-2">Wake Up & Smell the Freshness!</p>
+        <h6 class="font-bold">Price: 249TK</h6>
+        <button class="btn mt-3 font-bold">Add to Cart</button>
+      </div>
+     </div>
+    <!-- card 2 -->
+     <div class="bg-[#ebb392] text-left flex items-center rounded-lg">
+      <div><img class="max-w-40 mx-auto p-1 rounded-lg" src="./assets/606cea5ac822e531e6cb2fad474bbd1f.jpg" alt=""></div>
+      <div class="px-1">
+        <h1 class="text-xl font-bold ">Coffee Sylheti</h1>
+        <p class="text-base pb-2">A Cup of Comfort in Every Sip.</p>
+        <h6 class="font-bold">Price: 149TK</h6>
+        <button class="btn mt-3 font-bold">Add to Cart</button>
+      </div>
+     </div>
+    <!-- card 3 -->
+     <div class="bg-[#ebb392] text-left flex items-center rounded-lg">
+      <div><img class="max-w-40 mx-auto p-1 rounded-lg" src="./assets/606cea5ac822e531e6cb2fad474bbd1f.jpg" alt=""></div>
+      <div class="px-1">
+        <h1 class="text-xl font-bold ">Coffee Barishailla</h1>
+        <p class="text-base pb-2">Your Daily Dose of Happiness.</p>
+        <h6 class="font-bold">Price: 249TK</h6>
+        <button class="btn mt-3 font-bold">Add to Cart</button>
+      </div>
+     </div>
+    <!-- card 4 -->
+     <div class="bg-[#ebb392] text-left flex items-center rounded-lg">
+      <div><img class="max-w-40 mx-auto p-1 rounded-lg" src="./assets/606cea5ac822e531e6cb2fad474bbd1f.jpg" alt=""></div>
+      <div class="px-1">
+        <h1 class="text-xl font-bold ">Coffee Bataiya</h1>
+        <p class="text-base pb-2">Handcrafted Coffee, Made with Love.</p>
+        <h6 class="font-bold">Price: 349TK</h6>
+        <button class="btn mt-3 font-bold">Add to Cart</button>
+      </div>
+     </div>
+    <!-- card 5 -->
+     <div class="bg-[#ebb392] text-left flex items-center rounded-lg">
+      <div><img class="max-w-40 mx-auto p-1 rounded-lg" src="./assets/606cea5ac822e531e6cb2fad474bbd1f.jpg" alt=""></div>
+      <div class="px-1">
+        <h1 class="text-xl font-bold ">Coffee Dhakaiyan</h1>
+        <p class="text-base pb-2">Fuel Your Day with the Perfect Brew.</p>
+        <h6 class="font-bold">Price: 139TK</h6>
+        <button class="btn mt-3 font-bold">Add to Cart</button>
+      </div>
+     </div>
+    <!-- card 6 -->
+     <div class="bg-[#ebb392] text-left flex items-center rounded-lg">
+      <div><img class="max-w-40 mx-auto p-1 rounded-lg" src="./assets/606cea5ac822e531e6cb2fad474bbd1f.jpg" alt=""></div>
+      <div class="px-1">
+        <h1 class="text-xl font-bold ">Coffee Indo</h1>
+        <p class="text-base pb-2">Life Begins After Coffee – Start Yours Right!</p>
+        <h6 class="font-bold">Price: 449TK</h6>
+        <button class="btn mt-3 font-bold">Add to Cart</button>
+      </div>
+     </div>
+  </div>
 
-
+</section>
+   </main>
+   <footer class="text-center">
+    <h6>All Rights Reserved. Ismail Initiative. @2025</h6>
+   </footer>
     
 
 

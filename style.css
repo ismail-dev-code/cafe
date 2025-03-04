@@ -1,3 +1,13 @@
+.montserrat-sarif {
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 1000;
+}
+
 @keyframes typing {
     from {
       width: 0;
@@ -18,8 +28,24 @@
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid white; /* Cursor Effect */
+    border-right: 2px solid white; 
     width: 100%;
     animation: typing 4s steps(20) infinite alternate, blink 0.7s infinite;
+  }
+  
+
+  @keyframes dimlight {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+      color: #ebb392;
+      box-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+      color: #ebb392;
+      text-shadow: 0 0 10px #ebb392;
+    }
+  }
+  
+  .animate-dimlight {
+    animation: dimlight 4s infinite;
   }
   
