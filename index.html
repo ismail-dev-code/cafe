@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Shop</title>
     <!-- css link -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css">
 
     <!-- favIcon -->
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon" />
@@ -26,6 +26,61 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+<script>
+
+tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              bannerCafe:
+                "linear-gradient(360.00deg, rgba(12, 160, 88, 0.11),rgba(22, 207, 56, 0.1) 100%), url('./assets/banner.png')",
+            },
+            keyframes: {
+              dimlight: {
+                "0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%": {
+                  color: "#a7f910e4",
+                  boxShadow: "none",
+                },
+                "18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%": {
+                  color: "#8c8e8f",
+                  textShadow: "0 0 10px #03bcf4",
+                },
+              },
+              typing: {
+                "0%": {
+                  width: "0%",
+                  visibility: "hidden",
+                },
+                "100%": {
+                  width: "100%",
+                },
+              },
+              blink: {
+                "50%": {
+                  borderColor: "transparent",
+                },
+                "100%": {
+                  borderColor: "white",
+                },
+              },
+            },
+            animation: {
+              typing:
+                "typing 4s steps(20) infinite alternate, blink .7s infinite",
+              dimlight: "dimlight 10s infinite",
+            },
+            colors: {
+              accent: "#ebb392",
+              secondary: "rgb(255, 249, 244)",
+              bgGreen: "#115414",
+              primaryHover: "rgba(255, 219, 38, 0.807)",
+              cardColor: "#53db3a",
+            },
+          },
+        },
+      };
+</script>
+
 </head>
 <body class="font-sans bg-cyan-950">
     <!-- header Section  -->
@@ -33,8 +88,8 @@
       <div class="w-11/12 mx-auto flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center h-20">
-          <p class="font-bold text-3xl cursor-pointer">
-            C<span class="text-[#ebb392]">a</span>fe Sh<span
+          <p class="font-bold text-3xl animate-typing cursor-pointer">
+            C<span class="text-[#ebb392]">a</span>fee Sh<span
               class="text-[#ebb392]"
               >o</span
             >p
@@ -72,13 +127,13 @@
         <div class="w-11/12 mx-auto flex text-left justify-start">
           <div class="text-white">
             <h1 class="mb-5 text-6xl font-bold">
-              FRESH COFFEE IN <br />THE MORNING
+              FRESH <span class="text-[#ebb392]">COFFEE</span> IN <br />THE MORNING
             </h1>
             <p class="mb-5 text-xl text-[#f5efef99] max-w-md">
               Start your day with the perfect cup of coffee! Indulge in the rich
               aroma and smooth flavors of our freshly brewed blends.
             </p>
-            <button class="btn btn-warning font-bold text-white">
+            <button class="btn btn-warning animate-bounce font-bold text-white">
               Get it Now
             </button>
           </div>
