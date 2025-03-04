@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon" />
+
+    <!-- daisyui CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body class="font-sans bg-cyan-950">
+    <!-- header Section  -->
+    <section class="bg-black text-white">
+      <div class="w-11/12 mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center h-20">
+          <p class="font-bold text-3xl cursor-pointer">
+            C<span class="text-[#ebb392]">a</span>fe Sh<span
+              class="text-[#ebb392]"
+              >o</span
+            >p
+          </p>
+        </div>
+
+        <!-- Navbar Items -->
+        <div class="flex-grow flex justify-center">
+          <ul class="menu menu-horizontal gap-6 text-xl ml-12">
+            <li class="hover:bg-[#ebb392] rounded-lg hover:text-black "><a href="#">Home</a></li>
+            <li class="hover:bg-[#ebb392] rounded-lg hover:text-black"><a href="#">About</a></li>
+            <li class="hover:bg-[#ebb392] rounded-lg hover:text-black"><a href="#">Menu</a></li>
+            <li class="hover:bg-[#ebb392] rounded-lg hover:text-black"><a href="#">Products</a></li>
+            <li class="hover:bg-[#ebb392] rounded-lg hover:text-black"><a href="#">Review</a></li>
+            <li class="hover:bg-[#ebb392] rounded-lg hover:text-black"><a href="#">Contact</a></li>
+            <li class="hover:bg-[#ebb392] rounded-lg hover:text-black"><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+
+        <!-- Icons -->
+        <div class="flex gap-5 text-2xl">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section>
+      <div
+        class="hero min-h-[90vh] bg-cover bg-center bg-no-repeat"
+        style="background-image: url(./assets/banner.png)"
+      >
+        <div class="hero-overlay"></div>
+        <div class="w-11/12 mx-auto flex text-left justify-start">
+          <div class="text-white">
+            <h1 class="mb-5 text-6xl font-bold">
+              FRESH COFFEE IN <br />THE MORNING
+            </h1>
+            <p class="mb-5 text-xl text-[#f5efef99] max-w-md">
+              Start your day with the perfect cup of coffee! Indulge in the rich
+              aroma and smooth flavors of our freshly brewed blends.
+            </p>
+            <button class="btn btn-warning font-bold text-white">
+              Get it Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-black h-[60vh]">
+    <p class="text-white text-center text-6xl font-semibold">ABOUT US</p> <!-- text-black to text-white -->
+    <div class="w-11/12 pt-10 mx-auto hero bg-base-200 bg-black">
+        <div class="hero-overlay"></div>
+        <div class="hero-content flex-col lg:flex-row">
+            <div class="">
+                <img
+                src="assets/about.jpg"
+                class="h-[50vh] rounded-lg shadow-2xl" />
+            </div>
+
+            <div class="text-white">
+                <h1 class="text-4xl font-bold">What Makes Our Coffee Special?</h1>
+                <p class="py-6 max-w-md text-xl text-[#f5efef99]">
+                    Our coffee stands out with its rich aroma, premium beans, and perfectly balanced flavors, delivering an unforgettable taste in every sip!
+                </p>
+                <button class="btn btn-warning font-bold text-white">Learn More</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
